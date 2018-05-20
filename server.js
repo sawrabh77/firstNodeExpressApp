@@ -51,6 +51,14 @@ app.get('/about', (req,res) => {
     });
 });
 
+app.get('/project', (req,res) => {
+    //res.send("about page");
+    res.render("project.hbs",{
+        title : "Project Page",
+        message : "This is a portfolio page"
+    });
+});
+
 app.get('/bad', (req,res) => {
     res.send({
         errorMessage : "We have encountered an error!"
